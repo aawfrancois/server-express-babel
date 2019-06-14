@@ -7,6 +7,7 @@ import bodyParser from 'body-parser'
 const app = express()
 // Parse incoming request available "req.body"
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
